@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradeForPips</title>
+  <link rel="icon" type="image/png" href="TradeForPips/TradeForPips-Asset/logo.png">
+    </head>
+  <link rel="stylesheet" href="TradeForPips/TradeForPips.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <!-- Site Header -->
+    <header>
+      <img src="TradeForPips/TradeForPips-Asset/logo.png" alt="TradeForPips Logo" class="logo">
+      <div class="site-title">
+        <h1>TradeForPips</h1>
+        <p>(Precision, Patience, Profits)</p>
+      </div>
+    </header>
+
+    <!-- Top Section: Mission Content (left) + Chart Slider (right) -->
+    <section class="top-section">
+      <!-- Left: Mission Content -->
+      <div class="mission-content">
+        <h2 class="mission-title">Trading is a Skill. <span id="typewriter"></span></h2>
+        <p class="mission-text">
+          At TradeForPips, We teach you the skills, structure, and mindset that build lasting results in trading and in life. Because financial freedom isn't luck. It's learning how to make smart, consistent moves one trade at a time.
+        </p>
+
+        <!-- Subscriber Stats -->
+        <div class="stats">
+          <div class="stat"><span id="subs">0</span>+ subscribers</div>
+          <div class="stat">Trusted source for forex signals</div>
+        </div>
+        
+        <!-- Top CTA Buttons -->
+        <div class="cta-buttons">
+          <button class="btn-primary" id="joinBtn">
+            <img src="TradeForPips/TradeForPips-Asset/telegram icon.avif" alt="" class="telegram-icon">
+            <span>JOIN NOW!</span>
+          </button>
+          <button class="btn-secondary" id="testimonialBtn">What Others Are Saying</button>
+        </div>
+
+        <!-- Service Description -->
+        <h2 class="service-title">Professional Forex Trading Expert & Market Analyst</h2>
+        <p class="service-description">Get Expert Forex Analysis With Charts in EUR/USD, GBP/USD, USD/JPY, Gold, Crude Oil. Master Forex Trading without prior experience!</p>
+        
+        <!-- Features Grid -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>Forex Signals</h4>
+            <p>Actionable buy/sell signals with entry/targets and stop-loss.</p>
+          </div>
+          <div class="feature-card">
+            <h4>Daily Analysis</h4>
+            <p>Technical and fundamental commentary with annotated charts.</p>
+          </div>
+          <div class="feature-card">
+            <h4>Commodities</h4>
+            <p>Gold, crude oil and other high-probability setups.</p>
+          </div>
+          <div class="feature-card">
+            <h4>Community</h4>
+            <p>Join thousands of traders on Telegram for real-time updates.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Chart Slider -->
+      <div class="chart-slider-section">
+        <div class="chart-container">
+          <h3>Signals & Charts</h3>
+          <p>Daily chart analysis for major pairs and commodities.</p>
+          
+          <div class="slider-wrapper">
+            <div class="slider">
+              <button class="slider-arrow prev" id="prevBtn">‹</button>
+              <button class="slider-arrow next" id="nextBtn">›</button>
+              
+              <div class="slide active">
+                <img src="TradeForPips/TradeForPips-Asset/Chart.jpg" alt="Trading Chart 1">
+              </div>
+              <div class="slide">
+                <img src="TradeForPips/TradeForPips-Asset/chart1.jpg" alt="Trading Chart 2">
+              </div>
+              <div class="slide">
+                <img src="TradeForPips/TradeForPips-Asset/chart2.jpg" alt="Trading Chart 3">
+              </div>
+              <div class="slide">
+                <img src="TradeForPips/TradeForPips-Asset/chart3.jpg" alt="Trading Chart 4">
+              </div>
+              <div class="slide">
+                <img src="TradeForPips/TradeForPips-Asset/chart4.jpg" alt="Trading Chart 5">
+              </div>
+            </div>
+            
+            <div class="slider-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+              <span class="dot" data-slide="4"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Single Join Button Section -->
+    <section class="single-cta-section">
+      <button class="btn-primary" id="joinBtn2">
+        <img src="TradeForPips/TradeForPips-Asset/telegram icon.avif" alt="" class="telegram-icon">
+        <span>JOIN NOW!</span>
+      </button>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <h3 class="section-title">Trusted by Traders Worldwide</h3>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <img src="TradeForPips/TradeForPips-Asset/testimonial1.jpg" alt="Trader Testimonial 1" class="testimonial-img">
+        </div>
+        <div class="testimonial-card">
+          <img src="TradeForPips/TradeForPips-Asset/testimonial2.jpg" alt="Trader Testimonial 2" class="testimonial-img">
+        </div>
+        <div class="testimonial-card">
+          <img src="TradeForPips/TradeForPips-Asset/testimonial3.jpg" alt="Trader Testimonial 3" class="testimonial-img">
+        </div>
+        <div class="testimonial-card">
+          <img src="TradeForPips/TradeForPips-Asset/testimonial4.jpg" alt="Trader Testimonial 4" class="testimonial-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+      <button class="btn-primary" id="joinBtn3">
+        <img src="TradeForPips/TradeForPips-Asset/telegram icon.avif" alt="" class="telegram-icon">
+        <span>JOIN NOW!</span>
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>© <span id="year"></span> TradeForPips — Precision, Patience, Profits</div>
+    </footer>
+  </div>
+</div>
+
+  <script src="TradeForPips/TradeForPips.js"></script>
+</body>
+</html>

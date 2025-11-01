@@ -1,0 +1,539 @@
+/* ===========================
+   CSS VARIABLES
+   =========================== */
+:root {
+  --bg-primary: #0f1724;
+  --bg-card: #0b1220;
+  --color-accent: #6C7BFE;
+  --color-text: #fff;
+  --color-muted: rgba(255, 255, 255, 0.65);
+  --color-glass: rgba(255, 255, 255, 0.03);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* ===========================
+   RESET & BASE STYLES
+   =========================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #071029 0%, #07152a 100%);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}
+
+/* ===========================
+   LAYOUT STRUCTURE
+   =========================== */
+.wrap {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* ===========================
+   HEADER SECTION
+   =========================== */
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.site-title {
+  line-height: 1;
+}
+
+.site-title h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.site-title p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+/* ===========================
+   TOP SECTION (Mission + Chart)
+   =========================== */
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Mission Content (Left Side) */
+.mission-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mission-title {
+  font-size: 30px;
+  margin: 0;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#typewriter {
+  color: var(--color-accent);
+  border-right: 2px solid var(--color-accent);
+  padding-right: 5px;
+  animation: blink 0.8s step-end infinite;
+  white-space: nowrap;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: var(--color-accent); }
+  50% { border-color: transparent; }
+}
+
+.mission-text {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.mission-text a {
+  color: var(--color-text);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 8px rgba(108, 123, 254, 0.25);
+}
+
+.mission-text a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 123, 254, 0.35);
+}
+
+/* ===========================
+   SUBSCRIBER STATS
+   =========================== */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.stat {
+  background: var(--color-glass);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===========================
+   BUTTONS (Primary & Secondary)
+   =========================== */
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.btn-primary {
+  background: #fff;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 12px;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+  transition: transform 0.15s ease, opacity 0.15s, box-shadow 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: pulseButton 2s ease-in-out infinite;
+  width: 100%;
+}
+
+.btn-primary span {
+  flex: 1;
+  text-align: center;
+}
+
+.telegram-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  animation: scaleIcon 2s ease-in-out infinite;
+  position: absolute;
+  left: 16px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulseButton {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes scaleIcon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-text);
+}
+
+/* ===========================
+   SERVICE DESCRIPTION
+   =========================== */
+.service-title {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.service-description {
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* ===========================
+   FEATURES GRID (4 Cards in 2x2)
+   =========================== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.feature-card h4 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ===========================
+   CHART SLIDER (Right Side)
+   =========================== */
+.chart-slider-section {
+  width: 400px;
+}
+
+.chart-container {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  border-radius: 10px;
+  padding: 12px;
+  position: sticky;
+  top: 32px;
+}
+
+.chart-container h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.chart-container p {
+  margin: 0 0 12px 0;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.slider-wrapper {
+  position: relative;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #071428, #081125);
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 650px;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Slider Navigation Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.68);
+  border: none;
+  color: #000;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.slider-arrow:hover {
+  background: rgba(1, 1, 1, 0.494);
+  color: #fff;
+}
+
+.slider-arrow.prev {
+  left: 10px;
+}
+
+.slider-arrow.next {
+  right: 10px;
+}
+
+/* Slider Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0 4px 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===========================
+   SINGLE CTA SECTION
+   =========================== */
+.single-cta-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===========================
+   TESTIMONIALS SECTION
+   =========================== */
+.testimonials-section {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-title {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 12px;
+  transition: transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.testimonial-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ===========================
+   FINAL CTA SECTION
+   =========================== */
+.final-cta-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN - TABLET
+   =========================== */
+@media (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .top-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-slider-section {
+    width: 100%;
+  }
+  
+  .chart-container {
+    position: static;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-card {
+    text-align: center;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN - MOBILE
+   =========================== */
+@media (max-width: 640px) {
+  body {
+    padding: 5px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  header {
+    gap: 10px;
+  }
+  
+  .service-title {
+    font-size: 22px;
+  }
+  
+  .mission-title {
+    font-size: 20px;
+  }
+  
+  .logo {
+    width: 80px;
+  }
+}
